@@ -8,11 +8,19 @@ Account.prototype.setPin = function(pin) {
 };
 
 Account.prototype.depositFunds = function(amount) {
+	 var cache = this.balance;
 	 this.balance += parseInt(amount);				
+	 if (isNaN(this.balance)){ 
+			this.balance = cache;
+	 }
 };
 
 Account.prototype.withdrawFunds = function(amount) { 
+	 var cache = this.balance;
 	 this.balance -= parseInt(amount);
+	 if (isNaN(this.balance)){
+			this.balance = cache;
+	 }
 };
 
 module.exports = Account;

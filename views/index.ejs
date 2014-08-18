@@ -8,8 +8,11 @@
   </head>
   <body>
     <h1>Bank of the Internet</h1>
-		<p>You have a default pin of 1234. If you would like to change your pin, please submit it in the form below. Otherwise continue to the transactional options below. 
+		<p> You have a default pin of 1234. If you would like to change your pin, please submit it in the form below. Otherwise continue to the transactional options.</p> 
+		<p> Note: if you do not submit the correct pin, the form will not submit.</p>   
+		</br>
 		<form method='POST' action='/setPin'> 
+			<label>Change pin</label> 
 			<input name='pin'></input> 
 			<input type='submit'></input> 
 		</form> 
@@ -30,5 +33,6 @@
 		<form action='/viewBalance'> 
 			<input type='submit' value='View Balance'></input> 
 		</form>
+		<p> You can view the balance without entering a pin for times sake.</p> 
   </body>
 </html>
