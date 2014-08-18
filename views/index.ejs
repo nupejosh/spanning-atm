@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Bank of the Internet</h1>
+		<p>You have a default pin of 1234. If you would like to change your pin, please submit it in the form below. Otherwise continue to the transactional options below. 
+		<form method='POST' action='/setPin'> 
+			<input name='pin'></input> 
+			<input type='submit'></input> 
+		</form> 
+
+		<h4>Complete transaction</h4> 
+		<form method='POST' action='/transaction'>
+			<label>Enter pin</label> 
+			<input name=pin></input></br>
+			<p></p>  
+			<label>Deposit</label></br>
+			<input name='deposit'></input></br> 
+			<p></p>
+			<label>Withdraw</label></br>
+			<input name='withdraw'></input></br> 
+			<input type='submit'></input></br> 
+		</form> 	
+			<p>Or</p> 
+		<form action='/viewBalance'> 
+			<input type='submit' value='View Balance'></input> 
+		</form>
+  </body>
+</html>
